@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Nini Chat View",
+  "version": "0.2.0",
+  "description": "Read-only chat-bubble viewer for ninisite.com forum discussion threads.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Nini Chat View"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ninisite.com/discussion/topic/*"],
+      "js": [
+        "src/constants.js",
+        "src/settings.js",
+        "src/dom-extract.js",
+        "src/paginate.js",
+        "src/render.js",
+        "src/content.js"
+      ],
+      "css": ["src/styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
