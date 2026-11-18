@@ -1,0 +1,12 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+
+# Packaging output, if you ever zip/crx the extension
+*.crx
+*.pem
+*.zip
